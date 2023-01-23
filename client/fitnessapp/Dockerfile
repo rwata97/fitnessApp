@@ -4,11 +4,11 @@
 FROM node:10.16-alpine
 
 # Working directory be app
-WORKDIR /usr/src/app
+WORKDIR /fitnessapp
 
 COPY package*.json ./
 
-### Installing dependencies
+###  Installing dependencies
 
 RUN npm install --silent
 
@@ -17,4 +17,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm","start"]
