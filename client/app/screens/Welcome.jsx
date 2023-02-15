@@ -22,7 +22,7 @@ const Welcome = () => {
         style={styles.button}
         onPress={handleOnPress}
         title="Start"
-        styles={styles.button}
+
         // color="#841584"
         // accessibilityLabel="Learn more about this purple button"
       >
@@ -42,27 +42,22 @@ const Welcome = () => {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: 275,
     height: 57,
-    left: 43,
-    top: 665,
     borderRadius: 11,
   },
   background: {
-    flex: 1,
     justifyContent: 'flex-end',
     position: 'relative',
     alignItems: 'center',
     width: '100%',
   },
   button: {
-    flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
+    marginBottom: 80,
     color: 'white',
     width: '100%',
     height: '100%',
