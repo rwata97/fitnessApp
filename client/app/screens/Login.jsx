@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Image,
   View,
@@ -7,35 +8,28 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
+import Input from '../components/input/Input';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const Welcome = () => {
+import Icon from '@expo/vector-icons/MaterialCommunityIcons';
+
+const LoginScreen = () => {
   const handleOnPress = () => {
     console.log('working');
   };
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    rememberMe: false,
+  });
   return (
     <ImageBackground
       style={styles.background}
-      source={require('../assets/front-screen.png')}
+      source={require('../assets/login.jpg')}
     >
-      <TouchableOpacity
-        style={styles.button}
-        onPress={handleOnPress}
-        title="Start"
-
-        // color="#841584"
-        // accessibilityLabel="Learn more about this purple button"
-      >
-        <LinearGradient
-          colors={['#B36AE0', '#83A5D8']}
-          style={[styles.container]}
-          start={{ x: 0.0, y: 0.25 }}
-          end={{ x: 0.5, y: 1.0 }}
-          locations={[0, 0.6]}
-        >
-          <Text style={styles.text}>Get Started</Text>
-        </LinearGradient>
-      </TouchableOpacity>
+      <Input />
     </ImageBackground>
   );
 };
@@ -53,14 +47,13 @@ const styles = StyleSheet.create({
     position: 'relative',
     alignItems: 'center',
     width: '100%',
+    height: '100%',
   },
   button: {
     justifyContent: 'flex-end',
     alignItems: 'center',
     marginBottom: 80,
     color: 'white',
-    width: '100%',
-    height: '100%',
   },
   text: {
     color: 'white',
@@ -70,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Welcome;
+export default LoginScreen;
