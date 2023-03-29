@@ -8,6 +8,10 @@ import {
   Text,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+<<<<<<< Updated upstream:client/app/screens/Welcome.jsx
+=======
+import { useNavigation } from '@react-navigation/native';
+>>>>>>> Stashed changes:client/app/screens/WelcomeScreen.jsx
 
 const Welcome = () => {
   const handleOnPress = () => {
