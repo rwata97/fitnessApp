@@ -34,9 +34,9 @@ const LoginScreen = () => {
         //   })
         // );
         console.log(res);
-        navigation.navigate('Home');
+        // navigation.navigate('Home');
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     })();
   };

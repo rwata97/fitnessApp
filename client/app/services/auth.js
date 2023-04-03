@@ -6,8 +6,13 @@ export const loginUser = async (body) => {
     baseURL: `${url}/api/users/login`,
     headers: { 'Content-Type': 'application/json' },
   });
-  const { data } = await api.post('', body);
-  return data;
+
+  try {
+    const { data } = await api.post('', body);
+    return data;
+  } catch (error) {
+    console.log(error.response);
+  }
 };
 
 export const signupUser = async (body) => {
@@ -20,7 +25,6 @@ export const signupUser = async (body) => {
     const { data } = await api.post('', body);
     return data;
   } catch (error) {
-    // console.log(error.response);
     throw new Error(`Error in API response; ${error.message}`);
   }
 };
