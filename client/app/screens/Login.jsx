@@ -70,6 +70,8 @@ const LoginScreen = () => {
               label="password"
               onChangeFn={(text) => onChange(text)}
               value={value}
+              placeholder="Enter password"
+  placeholderTextColor="gray"
             />
           )}
         />
@@ -90,8 +92,8 @@ const LoginScreen = () => {
           </LinearGradient>
         </TouchableOpacity>
         <View>
-          <Text className="text-red-900 bg-white">Already have an account</Text>
-          <Text onPress={handleSignUpBtn}>Sign up</Text>
+          <Text style={{color: 'white'}}>No account?</Text>
+          <Text onPress={handleSignUpBtn} style={styles.text2}>Sign up</Text>
         </View>
       </Stack>
     </ImageBackground>
@@ -131,6 +133,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Inter',
     fontWeight: 'bold',
+  },
+  text2: {
+    color: 'blue',
+    fontSize: 15,
+    fontFamily: 'Inter',
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
   btnContainer: {
     justifyContent: 'center',

@@ -98,12 +98,12 @@ function SignupScreen() {
             end={{ x: 0.5, y: 1.0 }}
             locations={[0, 0.6]}
           >
-            <Text style={styles.text}>Sign in</Text>
+            <Text style={styles.text}>Sign Up</Text>
           </LinearGradient>
         </TouchableOpacity>
         <View>
-          <Text className="text-red-900 bg-white">Already have an account</Text>
-          <Text onPress={handleSigninBtn}>Sign in</Text>
+          <Text style={{color: 'white'}}>Already have an account?</Text>
+          <Text onPress={handleSigninBtn} style={styles.text2}>Sign in</Text>
         </View>
       </Stack>
     </ImageBackground>
@@ -143,6 +143,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Inter',
     fontWeight: 'bold',
+  },
+  text2: {
+    color: 'blue',
+    fontSize: 15,
+    fontFamily: 'Inter',
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
   btnContainer: {
     justifyContent: 'center',
